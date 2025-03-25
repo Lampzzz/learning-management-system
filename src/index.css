@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black-100: #010103;
+  --color-black-200: #0e0e10;
+  --color-black-300: #1c1c21;
+  --color-black-500: #3a3a49;
+  --color-black-600: #1a1a1a;
+  --font-generalsans: "General Sans", sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #010103;
+  font-family: "General Sans", sans-serif;
+}
+
+.c-space {
+  @apply sm:px-10 px-5;
+}
+
+.nav-sidebar {
+  @apply absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+}
+
+.nav-ul {
+  @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+}
+
+.nav-li {
+  @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+}
+
+.nav-li_a {
+  @apply text-lg md:text-base hover:text-white transition-colors;
+}
+
+.text-gray_gradient {
+  @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+}
+
+/* button component */
+.btn {
+  @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
+}
+
+.btn-ping {
+  @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
+}
+
+.btn-ping_dot {
+  @apply relative inline-flex rounded-full h-3 w-3 bg-green-500;
+}
+
+/* hero section */
+.hero_tag {
+  @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal;
+}
+
+.waving-hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
