@@ -1,0 +1,13 @@
+<div class="w-100 min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="p-4 rounded-4 shadow auth-container">
+    <div class="mb-5">
+      <div class="fs-3 fw-bold text-center mb-2">
+        <ng-content select="[title]"></ng-content>
+      </div>
+      <div class="text-muted text-center">
+        <ng-content select="[description]"></ng-content>
+      </div>
+    </div>
+    <ng-content select="[body]"></ng-content>
+  </div>
+</div>

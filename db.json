@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "student",
+      "email": "student@lms.com",
+      "password": "student123",
+      "role": "student"
+    },
+    {
+      "id": "2",
+      "username": "instructor",
+      "email": "instructor@lms.com",
+      "password": "instructor123",
+      "role": "instructor"
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "email": "admin@lms.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "1761221650424",
+      "username": "qatajykyki",
+      "email": "ripudican@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "student"
+    },
+    {
+      "id": "1761221694634",
+      "username": "futotoquwy",
+      "email": "gihoxuc@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "instructor"
+    }
+  ]
+}

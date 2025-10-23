@@ -1,0 +1,55 @@
+<auth-layout>
+  <div title>Create Account</div>
+  <div description>Join our learning platform</div>
+  <div body>
+    <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder=""
+          formControlName="username"
+        />
+        <!-- @if(registerForm.get("username")?.errors!['required']) {
+        <small class="text-danger">Required</small>
+        } -->
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder=""
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder=""
+          formControlName="password"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <select class="form-select" aria-label="" formControlName="role">
+          <option value="student" selected>Student</option>
+          <option value="instructor">Instructor</option>
+        </select>
+      </div>
+      <button class="btn btn-primary w-100 mb-3" [disabled]="!registerForm.valid">Sign Up</button>
+    </form>
+    <div class="text-center">
+      <small>
+        Already have an account?
+        <a [routerLink]="['/login']" class="text-primary fw-medium">Sign in</a>
+      </small>
+    </div>
+  </div>
+</auth-layout>

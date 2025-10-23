@@ -1,0 +1,35 @@
+<auth-layout>
+  <div title>Welcome Back</div>
+  <div description>Join our learning platform</div>
+  <div body>
+    <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+      <div class="mb-3">
+        <label for="username" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="username"
+          placeholder=""
+          formControlName="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder=""
+          formControlName="password"
+        />
+      </div>
+      <button class="btn btn-primary w-100 mb-3">Sign In</button>
+    </form>
+    <div class="text-center">
+      <small>
+        Don't have an account?
+        <a [routerLink]="['/register']" class="text-primary fw-medium">Sign up</a>
+      </small>
+    </div>
+  </div>
+</auth-layout>
