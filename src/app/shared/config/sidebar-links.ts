@@ -8,16 +8,16 @@ export const SIDEBAR_LINKS: SidebarLink[] = [
   {
     label: 'Dashboard',
     path: '/',
-    icon: '',
+    icon: 'grid',
   },
   {
     label: 'Users',
     path: '/users',
-    icon: '',
+    icon: 'people',
   },
   {
     label: 'Courses',
     path: '/courses',
-    icon: '',
+    icon: 'book',
   },
 ];

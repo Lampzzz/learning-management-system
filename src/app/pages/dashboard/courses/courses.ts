@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { DashboardHeader } from '../../../shared/components/dashboard-header/dashboard-header';
 
 @Component({
   selector: 'app-courses',
-  imports: [],
+  imports: [DashboardHeader],
   templateUrl: './courses.html',
-  styleUrl: './courses.scss'
+  styleUrl: './courses.scss',
 })
-export class Courses {
-
-}
+export class Courses {}

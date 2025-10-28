@@ -29,11 +29,129 @@
       "role": "student"
     },
     {
+      "id": "1761221650412",
+      "username": "qatajykyki",
+      "email": "ripudican@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "student"
+    },
+    {
       "id": "1761221694634",
       "username": "futotoquwy",
       "email": "gihoxuc@mailinator.com",
       "password": "Pa$$w0rd!",
       "role": "instructor"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1761221694635",
+      "title": "Introduction to React",
+      "description": "Learn the fundamentals of React framework",
+      "creator_id": "1761221694634"
+    },
+    {
+      "id": "1761221700001",
+      "title": "JavaScript Fundamentals",
+      "description": "Master the core concepts of JavaScript programming language",
+      "creator_id": "1761221694634"
+    },
+    {
+      "id": "1761221700002",
+      "title": "Python for Beginners",
+      "description": "Start your journey with Python programming",
+      "creator_id": "1761221694634"
+    },
+    {
+      "id": "1761221700003",
+      "title": "Angular Development",
+      "description": "Build modern web applications with Angular framework",
+      "creator_id": "2"
+    },
+    {
+      "id": "1761221700004",
+      "title": "Node.js Backend Development",
+      "description": "Create scalable server-side applications with Node.js",
+      "creator_id": "1761221694634"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "1761221694631",
+      "course_id": "1761221694635",
+      "title": "What is React?",
+      "content": "React is a library, not a framework. It helps you build user interfaces.",
+      "link": "https://www.youtube.com/watch?v=gedoSfZvBgE"
+    },
+    {
+      "id": "1761221700011",
+      "course_id": "1761221694635",
+      "title": "Components and Props",
+      "content": "Learn how to create reusable components and pass data with props",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "1761221700021",
+      "course_id": "1761221700001",
+      "title": "Variables and Data Types",
+      "content": "Understanding let, const, var and JavaScript data types",
+      "link": "https://www.youtube.com/watch?v=example1"
+    },
+    {
+      "id": "1761221700022",
+      "course_id": "1761221700001",
+      "title": "Functions and Scope",
+      "content": "Master function declarations, expressions, and scope in JavaScript",
+      "link": "https://www.youtube.com/watch?v=example2"
+    },
+    {
+      "id": "1761221700031",
+      "course_id": "1761221700002",
+      "title": "Python Basics",
+      "content": "Get started with Python syntax and basic operations",
+      "link": "https://www.youtube.com/watch?v=example3"
+    },
+    {
+      "id": "1761221700032",
+      "course_id": "1761221700002",
+      "title": "Control Flow",
+      "content": "Learn if statements, loops, and conditional logic in Python",
+      "link": "https://www.youtube.com/watch?v=example4"
+    },
+    {
+      "id": "1761221700033",
+      "course_id": "1761221700002",
+      "title": "Data Structures",
+      "content": "Working with lists, dictionaries, and tuples in Python",
+      "link": "https://www.youtube.com/watch?v=example5"
+    },
+    {
+      "id": "1761221700041",
+      "course_id": "1761221700003",
+      "title": "Angular Introduction",
+      "content": "Overview of Angular framework and its architecture",
+      "link": "https://www.youtube.com/watch?v=example6"
+    },
+    {
+      "id": "1761221700042",
+      "course_id": "1761221700003",
+      "title": "Angular Components",
+      "content": "Creating and using components in Angular applications",
+      "link": "https://www.youtube.com/watch?v=example7"
+    },
+    {
+      "id": "1761221700051",
+      "course_id": "1761221700004",
+      "title": "Node.js Fundamentals",
+      "content": "Introduction to Node.js and the event loop",
+      "link": "https://www.youtube.com/watch?v=example8"
+    },
+    {
+      "id": "1761221700052",
+      "course_id": "1761221700004",
+      "title": "Express.js Framework",
+      "content": "Building REST APIs with Express.js",
+      "link": "https://www.youtube.com/watch?v=example9"
     }
   ]
 }

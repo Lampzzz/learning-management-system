@@ -1,1 +1,50 @@
-<p>overview works!</p>
+<div class="mb-4">
+  <app-dashboard-header title="Admin Dashboard" description="Manage your learning platform" />
+</div>
+
+<div class="row row-cols-3 row-gap-4">
+  @for(stat of stats(); track stat.label) {
+  <app-stats-card
+    [label]="stat.label"
+    [value]="stat.value"
+    [icon]="stat.icon"
+    [bgColor]="stat.backgroundColor"
+  />
+  }
+</div>
+
+<div class="row row-cols-2 g-4 mt-1">
+  <div class="card p-3 border-0 shadow-sm">
+    <p class="fs-5 fw-bold">Recent Courses</p>
+    <div class="d-flex flex-column">
+      @for (item of recentCourses().slice(0, 2); track $index) {
+      <app-recent-course-card
+        [title]="item.title"
+        [creator]="item.creator?.username"
+        [lessonCount]="item.lessons.length"
+      />
+      }
+    </div>
+  </div>
+  <div class="card p-3 border-0 shadow-sm">
+    <p class="fs-5 fw-bold">User Distribution</p>
+    <app-user-distribution-progress-bar
+      label="Students"
+      [value]="statsCount().students"
+      [maxValue]="statsCount().all_users"
+      colorClass="bg-primary"
+    />
+    <app-user-distribution-progress-bar
+      label="Instructors"
+      [value]="statsCount().instructors"
+      [maxValue]="statsCount().all_users"
+      colorClass="bg-success"
+    />
+    <app-user-distribution-progress-bar
+      label="Admins"
+      [value]="statsCount().admins"
+      [maxValue]="statsCount().all_users"
+      colorClass="bg-info"
+    />
+  </div>
+</div>

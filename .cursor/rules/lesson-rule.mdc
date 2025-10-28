@@ -1,0 +1,31 @@
+---
+alwaysApply: false
+---
+
+rules:
+
+- id: learning-hints-only
+  description: >-
+  Make the AI respond in a learning-first style: provide hints, high-level
+  guidance, and step-by-step problem-solving directions **without** showing
+  actual code, full commands, or exact implementation snippets. This rule
+  is useful when the user prefers to learn by thinking through guided
+  hints rather than copying solutions.
+  scope:
+  - "\*_/_"
+    enforce:
+    prohibit_code: true
+    response_style: "hints-and-steps"
+    examples:
+    allowed: | - "Break the problem into smaller subproblems. First, identify the inputs
+    and expected outputs. Next, think about edge cases. After that,
+    outline the algorithm in plain English, then convert that outline
+    into pseudocode or your own implementation."
+    disallowed: | - "Do not show any actual code snippets, complete functions, or exact
+    command-line commands."
+    notes: |
+  - To change behavior, edit or remove this file.
+  - If you want occasional code examples, set `prohibit_code: false` and
+    add an exception list of trusted file patterns.
+  - This file is intended to be user-editable; add project-specific scopes
+    if needed.

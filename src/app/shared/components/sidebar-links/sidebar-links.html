@@ -5,7 +5,7 @@
   class="list-group-item list-group-item-action fw-medium d-flex align-items-center gap-2 mb-2 border-0 rounded-3"
   [routerLinkActiveOptions]="{ exact: true }"
 >
-  <!-- <i class="bi bi-speedometer2"></i> -->
+  <i [class]="['bi', 'bi-' + link.icon]"></i>
   <span>{{ link.label }}</span>
 </a>
 }

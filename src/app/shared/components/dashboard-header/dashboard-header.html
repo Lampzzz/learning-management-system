@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-between align-items-center py-4 mb-4">
+  <div class="flex-grow-1">
+    <h1 class="fs-2 fw-bold text-dark mb-2">{{ title() }}</h1>
+    <p class="text-muted mb-0">{{ description() }}</p>
+  </div>
+
+  @if (buttonLabel()) {
+  <button class="btn btn-primary d-flex align-items-center gap-2 px-4" (click)="onClick.emit()">
+    <span class="fw-bold">+</span>
+    <span>{{ buttonLabel() }}</span>
+  </button>
+  }
+</div>
