@@ -3,6 +3,7 @@ interface Course {
   title: string;
   description: string;
   creator_id: string;
+  created_at?: string;
 }
 
 type CourseWithRelations = Course & {

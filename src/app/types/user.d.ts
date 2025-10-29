@@ -6,4 +6,5 @@ interface User {
   email: string;
   password: string;
   role: Role;
+  created_at?: string;
 }
