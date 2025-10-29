@@ -10,5 +10,6 @@ export class DashboardHeader {
   title = input.required<string>();
   description = input.required<string>();
   buttonLabel = input<string>();
+  targetModal = input<string>();
   onClick = output();
 }

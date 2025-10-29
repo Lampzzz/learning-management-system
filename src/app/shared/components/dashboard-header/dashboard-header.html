@@ -5,7 +5,12 @@
   </div>
 
   @if (buttonLabel()) {
-  <button class="btn btn-primary d-flex align-items-center gap-2 px-4" (click)="onClick.emit()">
+  <button
+    class="btn btn-primary d-flex align-items-center gap-2 px-4"
+    (click)="onClick.emit()"
+    [attr.data-bs-toggle]="targetModal() ? 'modal' : null"
+    [attr.data-bs-target]="targetModal() ? '#' + targetModal() : null"
+  >
     <span class="fw-bold">+</span>
     <span>{{ buttonLabel() }}</span>
   </button>

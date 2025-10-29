@@ -2,4 +2,61 @@
   title="User Management"
   description="Manage all users and their roles"
   buttonLabel="Add User"
+  targetModal="addUser"
 ></app-dashboard-header>
+
+<app-modal modalId="addUser" title="Add New User" (onClick)="handleSubmit()">
+  <form [formGroup]="createUserForm">
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" formControlName="username" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Role</label>
+      <select class="form-select" formControlName="role">
+        <option value="student" selected>Student</option>
+        <option value="instructor">Instructor</option>
+      </select>
+    </div>
+  </form>
+</app-modal>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Created</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for ( user of data(); track user.id) {
+    <tr>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.created_at }}</td>
+      <td>
+        <div class="d-flex gap-3">
+          <i class="bi bi-pencil text-primary" style="cursor: pointer"></i>
+          <i
+            class="bi bi-trash text-danger"
+            style="cursor: pointer"
+            (click)="deleteUser(user.id)"
+          ></i>
+        </div>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
