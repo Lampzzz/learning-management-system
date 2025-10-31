@@ -2,32 +2,10 @@
   title="User Management"
   description="Manage all users and their roles"
   buttonLabel="Add User"
-  targetModal="addUser"
+  targetModal="user"
 ></app-dashboard-header>
 
-<app-modal modalId="addUser" title="Add New User" (onClick)="handleSubmit()">
-  <form [formGroup]="createUserForm">
-    <div class="mb-3">
-      <label class="form-label">Username</label>
-      <input type="text" class="form-control" formControlName="username" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-control" formControlName="email" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Password</label>
-      <input type="password" class="form-control" formControlName="password" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Role</label>
-      <select class="form-select" formControlName="role">
-        <option value="student" selected>Student</option>
-        <option value="instructor">Instructor</option>
-      </select>
-    </div>
-  </form>
-</app-modal>
+<app-user-editor #user_editor />
 
 <table class="table">
   <thead>
@@ -48,7 +26,9 @@
       <td>{{ user.created_at }}</td>
       <td>
         <div class="d-flex gap-3">
-          <i class="bi bi-pencil text-primary" style="cursor: pointer"></i>
+          <button data-bs-toggle="modal" data-bs-target="#user" (click)="setUserData(user)">
+            <i class="bi bi-pencil text-primary" style="cursor: pointer"></i>
+          </button>
           <i
             class="bi bi-trash text-danger"
             style="cursor: pointer"
