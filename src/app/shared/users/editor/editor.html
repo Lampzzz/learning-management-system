@@ -1,0 +1,27 @@
+<app-modal
+  modalId="user"
+  [title]="isEdit() ? 'Edit User' : 'Add New User'"
+  (onClick)="handleSubmit()"
+>
+  <form [formGroup]="userForm">
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" formControlName="username" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Role</label>
+      <select class="form-select" formControlName="role">
+        <option value="student" selected>Student</option>
+        <option value="instructor">Instructor</option>
+      </select>
+    </div>
+  </form>
+</app-modal>
