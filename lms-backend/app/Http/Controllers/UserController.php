@@ -13,16 +13,6 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'role' => 'required|in:student,instructor,admin',
             'password' => 'required|min:6'
-        ],
-        [
-            'name.required' => 'Name is required',
-            'email.required' => 'Email is required',
-            'email.email' => 'Invalid Email Format',
-            'email.unique' => 'Email is already taken',
-            'role.required' => 'Role is required',
-            'role.in' => 'Invalid Role Value',
-            'password.required' => 'Password is required',
-            'password.min' => 'Password minimum length is 6',
         ]);
 
         $user = User::create($validated);
